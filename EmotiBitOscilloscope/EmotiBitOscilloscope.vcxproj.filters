@@ -139,23 +139,23 @@
     <ClCompile Include="..\..\..\addons\EmotiBit_XPlat_Utils\src\EmotiBitPacket.cpp">
       <Filter>src\EmotiBit_XPlat_Utils\src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\ofxOscilloscope\src\patchboard.cpp">
-      <Filter>addons\ofxOscilloscope\src</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\Signal\Periodizer.cpp">
       <Filter>addons\ofxEmotiBit\src\Signal</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\ofxJSON\libs\jsoncpp\src\jsoncpp.cpp">
-      <Filter>addons\ofxJSON\libs\src</Filter>
+    <ClCompile Include="..\..\..\addons\ofxLSL\src\ofxLSLReceiver.cpp">
+      <Filter>addons\ofxLSL\src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\ofxJSON\src\ofxJSONElement.cpp">
+    <ClCompile Include="..\..\..\addons\ofxLSL\src\ofxLSLResolver.cpp">
+      <Filter>addons\ofxLSL\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxJSON\src\ofxJSONElement.cpp">
       <Filter>addons\ofxJSON\src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\ofxLSL\src\ofxLSLReceiver.cpp">
-      <Filter>addons\ofxLSL\src</Filter>
+    <ClCompile Include="..\..\..\addons\ofxOscilloscope\src\patchboard.cpp">
+      <Filter>addons\ofxOscilloscope\src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\ofxLSL\src\ofxLSLResolver.cpp">
-      <Filter>addons\ofxLSL\src</Filter>
+    <ClCompile Include="..\..\..\addons\ofxJSON\libs\jsoncpp\src\jsoncpp.cpp">
+      <Filter>addons\ofxJSON\libs\src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -497,32 +497,32 @@
     <ClInclude Include="..\..\..\addons\EmotiBit_XPlat_Utils\src\EmotiBitPacket.h">
       <Filter>src\EmotiBit_XPlat_Utils\src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\ofxOscilloscope\src\patchboard.h">
-      <Filter>addons\ofxOscilloscope\src</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\Signal\Periodizer.h">
       <Filter>addons\ofxEmotiBit\src\Signal</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\ofxJSON\libs\jsoncpp\include\json\json.h">
-      <Filter>addons\ofxJSON\libs\include\json</Filter>
+    <ClInclude Include="..\..\..\addons\ofxLSL\src\ofxLSLReceiver.h">
+      <Filter>addons\ofxLSL\src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\ofxJSON\libs\jsoncpp\include\json\json-forwards.h">
-      <Filter>addons\ofxJSON\libs\include\json</Filter>
+    <ClInclude Include="..\..\..\addons\ofxLSL\src\ofxLSLResolver.h">
+      <Filter>addons\ofxLSL\src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\ofxJSON\src\ofxJSON.h">
+    <ClInclude Include="..\..\..\addons\ofxLSL\src\ofxLSLSender.h">
+      <Filter>addons\ofxLSL\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxJSON\src\ofxJSON.h">
       <Filter>addons\ofxJSON\src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\ofxJSON\src\ofxJSONElement.h">
+    <ClInclude Include="..\..\..\addons\ofxJSON\src\ofxJSONElement.h">
       <Filter>addons\ofxJSON\src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\ofxLSL\src\ofxLSLReceiver.h">
-      <Filter>addons\ofxLSL\src</Filter>
+    <ClInclude Include="..\..\..\addons\ofxOscilloscope\src\patchboard.h">
+      <Filter>addons\ofxOscilloscope\src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\ofxLSL\src\ofxLSLResolver.h">
-      <Filter>addons\ofxLSL\src</Filter>
+    <ClInclude Include="..\..\..\addons\ofxJSON\libs\jsoncpp\include\json\json.h">
+      <Filter>addons\ofxJSON\libs\include\json</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\ofxLSL\src\ofxLSLSender.h">
-      <Filter>addons\ofxLSL\src</Filter>
+    <ClInclude Include="..\..\..\addons\ofxJSON\libs\jsoncpp\include\json\json-forwards.h">
+      <Filter>addons\ofxJSON\libs\include\json</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
