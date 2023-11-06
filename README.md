@@ -15,14 +15,41 @@ If you want to modify the code(or build the tools in Linux), below are the requi
 - ofxJSON - https://github.com/jeffcrouse/ofxJSON
 - EmotiBit_XPlat_Utils - https://github.com/EmotiBit/EmotiBit_XPlat_Utils
 - ofxLSL - https://github.com/EmotiBit/ofxLSL
-  - _**NOTE:**_ for lsl support, if developing with visual studio, code should be compiled for x64
+  - _**Note:**_ for lsl support, if developing with visual studio, code should be compiled for x64
   - liblsl64.dll should always be in the same folder as the .exe (i.e. EmotiBitOscilloscope/bin/liblsl64.dll)
   - liblsl64.lib should always be linked to in under _solution properties->linker->general->additional library directories_ and _solution properties->linker->input-> additional dependencies_
   - both of these libs are handled properly by default, but should be considered if deviating from release code
 - The project is built on a 64-bit architecture. Make sure you are on a machine that support `x64` build platform.
 - Required to build EmotiBit FirmwareInstaller
-  - ofxSerial - https://github.com/bakercp/ofxSerial
+  - ofxSerial - https://github.com/EmotiBit/ofxSerial
   - ofxIO - https://github.com/bakercp/ofxIO
+
+#### The following script may be run from a bash shell within your openFrameworks/addons/ directory to install ofxEmotiBit and all dependencies. 
+_**Note:**_ this requires you to have [github SSH key access set up](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
+```
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+git clone git@github.com:EmotiBit/ofxEmotiBit.git
+git clone git@github.com:bakercp/ofxNetworkUtils.git
+cd ofxNetworkUtils
+git checkout stable
+cd ..
+git clone git@github.com:produceconsumerobot/ofxOscilloscope.git
+git clone git@github.com:produceconsumerobot/ofxThreadedLogger.git
+git clone git@github.com:smukkejohan/ofxBiquadFilter.git
+git clone git@github.com:jeffcrouse/ofxJSON.git
+git clone git@github.com:EmotiBit/EmotiBit_XPlat_Utils.git
+git clone git@github.com:EmotiBit/ofxLSL.git
+git clone git@github.com:bakercp/ofxSerial.git
+cd ofxSerial
+git checkout stable
+cd ..
+git clone git@github.com:bakercp/ofxIO.git
+cd ofxIO
+git checkout stable
+cd ..
+```
+
 ## macOS 
 ### Note on using M1 macs (apple silicon)
 - If you are using the new M1 macs, then make sure to use Rosetta installed in xcode.
@@ -31,6 +58,11 @@ If you want to modify the code(or build the tools in Linux), below are the requi
 - **Adding paths to Library search paths**
   - Check if the directory paths for the files `liblsl64-static.a` and `liblslboost.a` are already present in the `project` > `Build Settings` > `Library Search Paths`. If they are not present, follow the below steps:  
     - Select your project in the **Target group**(in xcode project navigator), go to **Build Settings** tab, and add the following path in the **Library Search Paths** section: `../../../addons/ofxLSL/libs/labstreaminglayer/lib/osx`
+- For `EmotiBitDataParser`, if you get an error `ERROR: -NSDocumentRevisionsDebugMode does not exist, try absolute path` when compiling in `debug mode`,
+  - Choose the `build scheme` on the top left
+  - In the `Run` tab, open the `Options` tab
+  - unckeck the `Allow debugging when using document Version Browser` checkbox
+  - Try building again.
 
 ## Developing on Linux
 - You will require a version of gcc on your linux machine. Depending on the version, we need to install the appropriate OpenFrameworks code base. You can check the gcc verison on you system using the following command: `gcc --verison`.
